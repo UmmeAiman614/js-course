@@ -10,3 +10,7 @@ accountPassword="212121"
 accountCity = "chiniot"
 
 console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+
+
+// prefer not to use var
+// bcz of issue in block scope and functional scope
