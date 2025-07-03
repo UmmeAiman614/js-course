@@ -29,5 +29,31 @@ function userMessageLogin(username = "Sam"){
     }
 return `${username} just looged in`
 }
-console.log(userMessageLogin());
+// console.log(userMessageLogin());
 
+function addCartPrice(...num1){ //also work as rest
+    return num1
+}
+
+// console.log(addCartPrice(200,300,400));
+
+const user = {
+    name: "AIman",
+    Price: "1000"
+}
+function userObject(anyobject){
+    console.log(`user name is ${anyobject.name} and price is ${anyobject.Price}`);
+    
+}
+// userObject(user) //or
+userObject({
+    name:"Umme",
+    Price:"200"
+})
+
+const myNewArray = [200,300,400,500]
+
+function returnsecondvalue(getArray){
+    return getArray[1]
+}
+console.log(returnsecondvalue(myNewArray));
