@@ -1,79 +1,3 @@
-## Projects related to DOM
-
-## Project link
-[click here](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbl9aVGc1Wl80U3hCeXVLUmNRZU1YR2l2QVBwQXxBQ3Jtc0ttY0FrcGE2UDFJQWNMWEw0UXltLU95cFBVMXEtTlRsLTVJdUVFNE52eWJwRG1HcDQ5N1BfRER3UlRkaXdpX2xXMjhKS3d6MFQwczhvd3lUUVM0b0g2UlFDVDVqbkJWR2J2eE9mY2EzUE9nRGpSMHY4MA&q=https%3A%2F%2Fgithub.com%2Fhiteshchoudhary%2F&v=EGqHVjU-fas)
-
-## Solution Code
-## Project One
-
-```javascript
-const buttons = document.querySelectorAll('.button');
-const body = document.querySelector('body');
-
-buttons.forEach(function (button) {
-  button.addEventListener('click', function (e) {
-    // console.log(e);
-    // console.log(e.target);
-    if (e.target.id == 'grey') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'white') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'blue') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'yellow') {
-      body.style.backgroundColor = e.target.id;
-    }
-  });
-});
-
-```
-
-## project 2 solution
-
-```javascript
-const form = document.querySelector('form');
-// this usecase will give you empty
-// const height = parseInt(document.querySelector('#height').value)
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const height = parseInt(document.querySelector('#height').value);
-  const weight = parseInt(document.querySelector('#weight').value);
-  const results = document.querySelector('#results');
-
-  if (height === '' || height < 0 || isNaN(height)) {
-    results.innerHTML = `Please give a valid height ${height}`;
-  } else if (weight === '' || weight < 0 || isNaN(weight)) {
-    results.innerHTML = `Please give a valid weight ${weight}`;
-  } else {
-    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
-    //show the result
-    results.innerHTML = `<span>${bmi}</span>`;
-  }
-});
-
-```
-
-
-## Project 3 Solution
-
-```javascript
-const clock = document.getElementById('clock')
-
-setInterval(function(){
-    let date = new Date()
-    clock.innerHTML = date.toLocaleTimeString();
-}, 1000)
-
-```
-
-## Project 4 Solution
-
-```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
@@ -166,9 +90,4 @@ function newGame() {
     playGame = true;
   });
 }
-
-```
-
-
-
 
