@@ -24,3 +24,4 @@
 
 const balance = 2000;
 //else if code here in video
+// and, or code here in video

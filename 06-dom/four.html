@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="language">
+        <li class = "langNAme">javascript</li>
+    </ul>
+</body>
+
+<script>
+    function AddLAng(langNAme){
+        const li = document.createElement('li');
+        li.innerHTML = `${langNAme}`
+        document.querySelector('.language').appendChild(li)
+    }
+    AddLAng("Python");
+
+    function addOptiLang(langNAme){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langNAme));
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("Golang")
+
+    //EDIT
+    const newLang = document.querySelector('li:nth-child(2)') 
+    //newLang.innerHTML = "HTML"
+
+    const newLi = document.createElement('li')
+    newLi.textContent = "Html"
+    newLang.replaceWith(newLi)
+
+
+    //EDIT
+    const firstChild = document.querySelector('li:first-child')
+    firstChild.outerHTML = "<li>JAVASCRIPT</li>"
+    //remove
+    const lastLi = document.querySelector('li:last-child')
+    lastLi.remove()
+</script>
+</html>

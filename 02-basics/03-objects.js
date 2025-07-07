@@ -16,7 +16,7 @@ const jsUsers = {
     logindays: ["mon", "Tues"]
 }
 
-// console.log(jsUsers.email); // we cant access through this full name
+// console.log(jsUsers.email); //we cant access through this full name
 // console.log(jsUsers["email", "name"]); //in some cases
 // console.log(jsUsers[typeof mySym]);
 
