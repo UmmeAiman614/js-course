@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading">CHAI AUR Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    const h1 = document.querySelector('#heading');
+    const start = document.querySelector('#start')
+    const stop = document.querySelector('#stop')
+
+    function changeHeading(str) {
+        //h1.innerHTML = "Best JS series"
+        console.log(str, Date.now())
+    }
+    const changeMe = setInterval(changeHeading, 1000, "Hi")
+    start.addEventListener('click', function () {
+       setInterval(changeMe)
+        console.log("Start")
+    })
+
+    stop.addEventListener('click', function () {
+        clearInterval(changeMe)
+        console.log("Stop")
+
+    })
+</script>
+
+</html>

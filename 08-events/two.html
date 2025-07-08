@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+</head>
+
+<body>
+    <h1 id="heading">CHAI AUR CODE</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const h1 = document.querySelector('#heading')
+    const stop = document.querySelector('#stop')
+    function changeHeading() {
+        h1.innerHTML = "Best JS series"
+    }
+    const changeME = setTimeout(changeHeading, 2000)
+
+   
+        stop.addEventListener('click', function () {
+            clearTimeout(changeME)
+            console.log("Stopped")
+        })
+    
+</script>
+
+</html>
