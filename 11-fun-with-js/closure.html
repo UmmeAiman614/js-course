@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="green">Green</button>
+    <button id="orange">Orange</button>
+
+</body>
+
+<script>
+    // lexical scoping
+
+
+    //function init() {
+    //     let name = "Mozilla"; 
+    //     function displayName() {
+    //         console.log(name); 
+    //     }
+    //     displayName();
+    // }
+    // init();
+
+
+
+    function outer() {
+        const userName = "Aiman"
+        // console.log("OUTER: ", secret) //error
+        function inner() {
+            const secret = "Umme"
+            console.log("Inner: ", userName)  //can access parents element
+        }
+        function innerTwo() {
+            console.log(secret)   //will not print siblings cannot share elements
+            console.log("Inner Two: ", userName) // can access parents elements
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    console.log("Outer: ", userName)
+
+
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+
+</script>
+
+<script>
+    //<!-- const orange = document.querySelector('#orange')
+   // const green = document.querySelector('#green')
+
+   // orange.addEventListener('click', function () {
+    //    document.body.style.backgroundColor = 'orange';
+    //})
+   // green.addEventListener('click', function () {
+   //     document.body.style.backgroundColor = 'green';
+   // }) -->
+
+
+    function clickHandler(color){
+       // document.body.style.backgroundColor = `${color}`;
+
+        return function(){
+        document.body.style.backgroundColor = `${color}`;
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+
+
+</script>
+
+</html>
